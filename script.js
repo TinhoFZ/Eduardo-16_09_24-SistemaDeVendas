@@ -96,9 +96,14 @@ var numeroVinho = 0
 var numeroChocolate = 0
 var numeroAzeite = 0
 
-// Valor total de todos os produtos
+// Valores não relacionados a produtos
 var precoTotal = 0
+var dinheiroCliente = 0
 
+function adicionarDinheiroDoCliente() {
+    dinheiroCliente = document.querySelector("#escreverDinheiroDoCliente").value
+    document.querySelector("#dinheiroDoCliente").textContent = `Voce têm ${dinheiroCliente} para gastar`
+}
 
 function adicionarProdutoALista() {
     var produto = document.querySelector("#compra").value
@@ -118,6 +123,9 @@ function adicionarProdutoALista() {
             document.querySelector("#smartphonesComprados").textContent = `Você comprou ${numeroSmartphone} deste produto | Isso vai lhe custar ${precoTotalSmartphone}`
 
             precoTotal = precoTotal + precoSmartphone
+            dinheiroCliente = dinheiroCliente - precoSmartphone
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "fone":
@@ -130,6 +138,9 @@ function adicionarProdutoALista() {
             document.querySelector("#fonesComprados").textContent = `Você comprou ${numeroFone} deste produto | Isso vai lhe custar ${precoTotalFone}`
             
             precoTotal = precoTotal + precoFone
+            dinheiroCliente = dinheiroCliente - precoFone
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "smartwatch":
@@ -142,6 +153,9 @@ function adicionarProdutoALista() {
             document.querySelector("#smartwatchsComprados").textContent = `Você comprou ${numeroSmartwatch} deste produto | Isso vai lhe custar ${precoTotalSmartwatch}`
     
             precoTotal = precoTotal + precoSmartwatch
+            dinheiroCliente = dinheiroCliente - precoSmartwatch
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "tablet":
@@ -155,6 +169,9 @@ function adicionarProdutoALista() {
             document.querySelector("#tabletsComprados").textContent = `Você comprou ${numeroTablet} deste produto | Isso vai lhe custar ${precoTotalTablet}`
         
             precoTotal = precoTotal + precoTablet
+            dinheiroCliente = dinheiroCliente - precoTablet
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
 
@@ -174,6 +191,9 @@ function adicionarProdutoALista() {
             document.querySelector("#LiquidificadoresComprados").textContent = `Você comprou ${numeroLiquidificador} deste produto | Isso vai lhe custar ${precoTotalLiquidificador}`
     
             precoTotal = precoTotal + precoLiquidificador
+            dinheiroCliente = dinheiroCliente - precoLiquidificador
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "café":
@@ -186,6 +206,9 @@ function adicionarProdutoALista() {
             document.querySelector("#cafesComprados").textContent = `Você comprou ${numeroCafe} deste produto | Isso vai lhe custar ${precoTotalCafe}`
     
             precoTotal = precoTotal + precoCafe
+            dinheiroCliente = dinheiroCliente - precoCafe
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "ventilador":
@@ -198,6 +221,9 @@ function adicionarProdutoALista() {
             document.querySelector("#ventiladoresComprados").textContent = `Você comprou ${numeroVentilador} deste produto | Isso vai lhe custar ${precoTotalVentilador}`
         
             precoTotal = precoTotal + precoVentilador
+            dinheiroCliente = dinheiroCliente - precoVentilador
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "microondas":
@@ -210,6 +236,9 @@ function adicionarProdutoALista() {
             document.querySelector("#microondasComprados").textContent = `Você comprou ${numeroMicroondas} deste produto | Isso vai lhe custar ${precoTotalMicroondas}`
             
             precoTotal = precoTotal + precoMicroondas
+            dinheiroCliente = dinheiroCliente - precoMicroondas
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
 
@@ -230,6 +259,9 @@ function adicionarProdutoALista() {
             document.querySelector("#camisasCompradas").textContent = `Você comprou ${numeroCamisa} deste produto | Isso vai lhe custar ${precoTotalCamisa}`
                 
             precoTotal = precoTotal + precoCamisa
+            dinheiroCliente = dinheiroCliente - precoCamisa
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "calça":
@@ -242,6 +274,9 @@ function adicionarProdutoALista() {
             document.querySelector("#calcasCompradas").textContent = `Você comprou ${numeroCalca} deste produto | Isso vai lhe custar ${precoTotalCalca}`
                     
             precoTotal = precoTotal + precoCalca
+            dinheiroCliente = dinheiroCliente - precoCalca
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "tenis":
@@ -254,6 +289,9 @@ function adicionarProdutoALista() {
             document.querySelector("#tenisComprados").textContent = `Você comprou ${numeroTenis} deste produto | Isso vai lhe custar ${precoTotalTenis}`
                         
             precoTotal = precoTotal + precoTenis
+            dinheiroCliente = dinheiroCliente - precoTenis
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "jaqueta":
@@ -266,6 +304,9 @@ function adicionarProdutoALista() {
             document.querySelector("#jaquetasCompradas").textContent = `Você comprou ${numeroJaqueta} deste produto | Isso vai lhe custar ${precoTotalJaqueta}`
                             
             precoTotal = precoTotal + precoJaqueta
+            dinheiroCliente = dinheiroCliente - precoJaqueta
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "perfume":
@@ -278,6 +319,9 @@ function adicionarProdutoALista() {
             document.querySelector("#perfumesComprados").textContent = `Você comprou ${numeroPerfume} deste produto | Isso vai lhe custar ${precoTotalPerfume}`
                                 
             precoTotal = precoTotal + precoPerfume
+            dinheiroCliente = dinheiroCliente - precoPerfume
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
 
@@ -297,6 +341,9 @@ function adicionarProdutoALista() {
             document.querySelector("#hidratantesComprados").textContent = `Você comprou ${numeroHidratante} deste produto | Isso vai lhe custar ${precoTotalHidratante}`
                                     
             precoTotal = precoTotal + precoHidratante
+            dinheiroCliente = dinheiroCliente - precoHidratante
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "maquiagem":
@@ -309,6 +356,9 @@ function adicionarProdutoALista() {
             document.querySelector("#maquiagensCompradas").textContent = `Você comprou ${numeroMaquiagem} deste produto | Isso vai lhe custar ${precoTotalMaquiagem}`
                                         
             precoTotal = precoTotal + precoMaquiagem
+            dinheiroCliente = dinheiroCliente - precoMaquiagem
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "escova":
@@ -321,6 +371,9 @@ function adicionarProdutoALista() {
             document.querySelector("#escovasCompradas").textContent = `Você comprou ${numeroEscova} deste produto | Isso vai lhe custar ${precoTotalEscova}`
                                             
             precoTotal = precoTotal + precoEscova
+            dinheiroCliente = dinheiroCliente - precoEscova
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "toalha":
@@ -333,6 +386,9 @@ function adicionarProdutoALista() {
             document.querySelector("#toalhasCompradas").textContent = `Você comprou ${numeroToalha} deste produto | Isso vai lhe custar ${precoTotalToalha}`
                                                 
             precoTotal = precoTotal + precoToalha
+            dinheiroCliente = dinheiroCliente - precoToalha
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
 
@@ -352,6 +408,9 @@ function adicionarProdutoALista() {
             document.querySelector("#abajuresComprados").textContent = `Você comprou ${numeroAbajur} deste produto | Isso vai lhe custar ${precoTotalAbajur}`
                                                 
             precoTotal = precoTotal + precoAbajur
+            dinheiroCliente = dinheiroCliente - precoAbajur
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "quadro":
@@ -364,6 +423,9 @@ function adicionarProdutoALista() {
             document.querySelector("#quadrosComprados").textContent = `Você comprou ${numeroQuadro} deste produto | Isso vai lhe custar ${precoTotalQuadro}`
                                                 
             precoTotal = precoTotal + precoQuadro
+            dinheiroCliente = dinheiroCliente - precoQuadro
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "almofada":
@@ -376,6 +438,9 @@ function adicionarProdutoALista() {
             document.querySelector("#almofadasCompradas").textContent = `Você comprou ${numeroAlmofada} deste produto | Isso vai lhe custar ${precoTotalAlmofada}`
                                                     
             precoTotal = precoTotal + precoAlmofada
+            dinheiroCliente = dinheiroCliente - precoAlmofada
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
     
 
@@ -395,6 +460,9 @@ function adicionarProdutoALista() {
             document.querySelector("#carrinhosComprados").textContent = `Você comprou ${numeroCarrinho} deste produto | Isso vai lhe custar ${precoTotalCarrinho}`
                                                     
             precoTotal = precoTotal + precoCarrinho
+            dinheiroCliente = dinheiroCliente - precoCarrinho
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
     
         case "quebra-cabeça":
@@ -407,6 +475,9 @@ function adicionarProdutoALista() {
             document.querySelector("#quebra-cabeçasComprados").textContent = `Você comprou ${numeroQuebracabeca} deste produto | Isso vai lhe custar ${precoTotalQuebracabeca}`
                                                         
             precoTotal = precoTotal + precoQuebracabeca
+            dinheiroCliente = dinheiroCliente - precoQuebracabeca
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "boneca":
@@ -419,6 +490,9 @@ function adicionarProdutoALista() {
             document.querySelector("#bonecasCompradas").textContent = `Você comprou ${numeroBoneca} deste produto | Isso vai lhe custar ${precoTotalBoneca}`
                                                         
             precoTotal = precoTotal + precoBoneca
+            dinheiroCliente = dinheiroCliente - precoBoneca
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         // Jogo não está funcionando
@@ -432,6 +506,9 @@ function adicionarProdutoALista() {
             document.querySelector("#JogosComprados").textContent = `Você comprou ${numeroJogo} deste produto | Isso vai lhe custar ${precoTotalJogo}`
                                                         
             precoTotal = precoTotal + precoJogo
+            dinheiroCliente = dinheiroCliente - precoJogo
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
 
@@ -451,6 +528,9 @@ function adicionarProdutoALista() {
             document.querySelector("#livrosComprados").textContent = `Você comprou ${numeroLivro} deste produto | Isso vai lhe custar ${precoTotalLivro}`
                                                         
             precoTotal = precoTotal + precoLivro
+            dinheiroCliente = dinheiroCliente - precoLivro
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "dvd":
@@ -463,6 +543,9 @@ function adicionarProdutoALista() {
             document.querySelector("#DVDsComprados").textContent = `Você comprou ${numeroDVD} deste produto | Isso vai lhe custar ${precoTotalDVD}`
                                                         
             precoTotal = precoTotal + precoDVD
+            dinheiroCliente = dinheiroCliente - precoDVD
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "cd":
@@ -475,6 +558,9 @@ function adicionarProdutoALista() {
             document.querySelector("#CDsComprados").textContent = `Você comprou ${numeroCD} deste produto | Isso vai lhe custar ${precoTotalCD}`
                                                         
             precoTotal = precoTotal + precoCD
+            dinheiroCliente = dinheiroCliente - precoCD
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "e-book":
@@ -487,6 +573,9 @@ function adicionarProdutoALista() {
             document.querySelector("#ebooksComprados").textContent = `Você comprou ${numeroEbook} deste produto | Isso vai lhe custar ${precoTotalEbook}`
                                                         
             precoTotal = precoTotal + precoEbook
+            dinheiroCliente = dinheiroCliente - precoEbook
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
 
@@ -505,6 +594,9 @@ function adicionarProdutoALista() {
             document.querySelector("#frutasCompradas").textContent = `Você comprou ${numeroFruta} deste produto | Isso vai lhe custar ${precoTotalFruta}`
                                                     
             precoTotal = precoTotal + precoFruta
+            dinheiroCliente = dinheiroCliente - precoFruta
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
     
         case "vinho":
@@ -517,6 +609,9 @@ function adicionarProdutoALista() {
             document.querySelector("#vinhosComprados").textContent = `Você comprou ${numeroVinho} deste produto | Isso vai lhe custar ${precoTotalVinho}`
                                                         
             precoTotal = precoTotal + precoVinho
+            dinheiroCliente = dinheiroCliente - precoVinho
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "chocolate":
@@ -529,6 +624,9 @@ function adicionarProdutoALista() {
             document.querySelector("#chocolatesComprados").textContent = `Você comprou ${numeroChocolate} deste produto | Isso vai lhe custar ${precoTotalChocolate}`
                                                         
             precoTotal = precoTotal + precoChocolate
+            dinheiroCliente = dinheiroCliente - precoChocolate
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "azeite":
@@ -541,6 +639,9 @@ function adicionarProdutoALista() {
             document.querySelector("#azeitesComprados").textContent = `Você comprou ${numeroAzeite} deste produto | Isso vai lhe custar ${precoTotalAzeite}`
                                                         
             precoTotal = precoTotal + precoAzeite
+            dinheiroCliente = dinheiroCliente - precoAzeite
+            
+            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         default:

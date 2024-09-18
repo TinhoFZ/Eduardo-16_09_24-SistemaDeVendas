@@ -11,6 +11,12 @@ var precoCafe = 499
 var precoVentilador = 179
 var precoMicroondas = 399
 
+// Roupas e acessórios
+var precoCamisa = 89
+var precoCalca = 159
+var precoTenis = 299
+var precoJaqueta = 499
+
 
 // Número de produtos comprados para contar múltiplos produtos iguais.
 // Eletrônicos
@@ -24,6 +30,12 @@ var numeroLiquidificador = 0
 var numeroCafe = 0
 var numeroVentilador = 0
 var numeroMicroondas = 0
+
+// Roupas e acessórios
+var numeroCamisa = 0
+var numeroCalca = 0
+var numeroTenis = 0
+var numeroJaqueta = 0
 
 
 // Valor total de todos os produtos
@@ -88,6 +100,11 @@ function adicionarProdutoALista() {
         break;
 
 
+
+
+
+
+
         // Eletrodomésticos
         case "liquidificador":
         case "Liquidificador":
@@ -137,8 +154,65 @@ function adicionarProdutoALista() {
             precoTotal = precoTotal + precoMicroondas
         break;
 
+
+
+
+
+
+
+
+        // Roupas e acessórios
+        case "camisa":
+        case "Camisa":
+        case "CAMISA":
+        case "Camisa Casual Algodão":
+                
+            numeroCamisa ++
+            var precoTotalCamisa = precoCamisa * numeroCamisa
+            document.querySelector("#camisasCompradas").textContent = `Você comprou ${numeroCamisa} deste produto | Isso vai lhe custar ${precoTotalCamisa}`
+                
+            precoTotal = precoTotal + precoCamisa
+        break;
+
+        case "calça":
+        case "Calça":
+        case "CALÇA":
+        case "Calça Jeans Premium":
+                    
+            numeroCalca ++
+            var precoTotalCalca = precoCalca * numeroCalca
+            document.querySelector("#calcasCompradas").textContent = `Você comprou ${numeroCalca} deste produto | Isso vai lhe custar ${precoTotalCalca}`
+                    
+            precoTotal = precoTotal + precoCalca
+        break;
+
+        case "tenis":
+        case "Tenis":
+        case "TENIS":
+        case "Tênis Esportivo X-Run":
+                        
+            numeroTenis ++
+            var precoTotalTenis = precoTenis * numeroTenis
+            document.querySelector("#tenisComprados").textContent = `Você comprou ${numeroTenis} deste produto | Isso vai lhe custar ${precoTotalTenis}`
+                        
+            precoTotal = precoTotal + precoTenis
+        break;
+
+        case "jaqueta":
+        case "Jaqueta":
+        case "JAQUETA":
+        case "Jaqueta de Couro":
+                            
+            numeroJaqueta ++
+            var precoTotalJaqueta = precoJaqueta * numeroJaqueta
+            document.querySelector("#jaquetasCompradas").textContent = `Você comprou ${numeroJaqueta} deste produto | Isso vai lhe custar ${precoTotalJaqueta}`
+                            
+            precoTotal = precoTotal + precoJaqueta
+        break;
+
         default:
             document.querySelector("#erro").textContent = "Esse produto não é valido"
+            
     }
 
     document.querySelector("#precoTotal").textContent = `${precoTotal}`

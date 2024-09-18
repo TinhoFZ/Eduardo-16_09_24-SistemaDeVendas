@@ -17,6 +17,35 @@ var precoCalca = 159
 var precoTenis = 299
 var precoJaqueta = 499
 
+// Beleza e cuidados pessoais
+var precoPerfume = 199
+var precoHidratante = 129
+var precoMaquiagem = 299
+var precoEscova = 169
+
+// Casa e decoração
+var precoToalha = 149
+var precoAbajur = 99
+var precoQuadro = 179
+var precoAlmofada = 89
+
+// Brinquedos e Jogos
+var precoCarrinho = 149
+var precoQuebracabeca = 79
+var precoBoneca = 199
+var precoJogo = 129
+
+// Livros e mídia
+var precoLivro = 59
+var precoDVD = 129
+var precoCD = 39
+var precoEbook = 49
+
+// Alimentos e bebidas
+var precoFruta =  89
+var precoVinho = 149
+var precoChocolate = 79
+var precoAzeite = 59
 
 // Número de produtos comprados para contar múltiplos produtos iguais.
 // Eletrônicos
@@ -37,6 +66,35 @@ var numeroCalca = 0
 var numeroTenis = 0
 var numeroJaqueta = 0
 
+// Beleza e cuidados pessoais
+var numeroPerfume = 0
+var numeroHidratante = 0
+var numeroMaquiagem = 0
+var numeroEscova = 0
+
+// Casa e decoração
+var numeroToalha = 0
+var numeroAbajur = 0
+var numeroQuadro = 0
+var numeroAlmofada = 0
+
+// Brinquedos e Jogos
+var numeroCarrinho = 0
+var numeroQuebracabeca = 0
+var numeroBoneca = 0
+var numeroJogo = 0
+
+// Livros e mídia
+var numeroLivro = 0
+var numeroDVD = 0
+var numeroCD = 0
+var numeroEbook = 0
+
+// Alimentos e bebidas
+var numeroFruta = 0
+var numeroVinho = 0
+var numeroChocolate = 0
+var numeroAzeite = 0
 
 // Valor total de todos os produtos
 var precoTotal = 0
@@ -210,10 +268,285 @@ function adicionarProdutoALista() {
             precoTotal = precoTotal + precoJaqueta
         break;
 
+        case "perfume":
+        case "Perfume":
+        case "PERFUME":
+        case "Perfume Floral Essence 50ml":
+                            
+            numeroPerfume ++
+            var precoTotalPerfume = precoPerfume * numeroPerfume
+            document.querySelector("#perfumesComprados").textContent = `Você comprou ${numeroPerfume} deste produto | Isso vai lhe custar ${precoTotalPerfume}`
+                                
+            precoTotal = precoTotal + precoPerfume
+        break;
+
+
+
+
+
+
+
+        // Beleza e cuidados pessoais
+        case "hidratante":
+        case "Hidratante":
+        case "HIDRATANTE":
+        case "Creme Hidratante Facial Anti-idade":
+                                
+            numeroHidratante ++
+            var precoTotalHidratante = precoHidratante * numeroHidratante
+            document.querySelector("#hidratantesComprados").textContent = `Você comprou ${numeroHidratante} deste produto | Isso vai lhe custar ${precoTotalHidratante}`
+                                    
+            precoTotal = precoTotal + precoHidratante
+        break;
+
+        case "maquiagem":
+        case "Maquiagem":
+        case "MAQUIAGEM":
+        case "Kit de Maquiagem Glamour":
+                                    
+            numeroMaquiagem ++
+            var precoTotalMaquiagem = precoMaquiagem * numeroMaquiagem
+            document.querySelector("#maquiagensCompradas").textContent = `Você comprou ${numeroMaquiagem} deste produto | Isso vai lhe custar ${precoTotalMaquiagem}`
+                                        
+            precoTotal = precoTotal + precoMaquiagem
+        break;
+
+        case "escova":
+        case "Escova":
+        case "ESCOVA":
+        case "Escova de Cabelo Modeladora":
+                                        
+            numeroEscova ++
+            var precoTotalEscova = precoEscova * numeroEscova
+            document.querySelector("#escovasCompradas").textContent = `Você comprou ${numeroEscova} deste produto | Isso vai lhe custar ${precoTotalEscova}`
+                                            
+            precoTotal = precoTotal + precoEscova
+        break;
+
+        case "toalha":
+        case "Toalha":
+        case "TOALHA":
+        case "Conjunto de Toalhas de Banho":
+                                            
+            numeroToalha ++
+            var precoTotalToalha = precoToalha * numeroToalha
+            document.querySelector("#toalhasCompradas").textContent = `Você comprou ${numeroToalha} deste produto | Isso vai lhe custar ${precoTotalToalha}`
+                                                
+            precoTotal = precoTotal + precoToalha
+        break;
+
+
+
+
+
+
+
+        // Casa e decoração
+        case "abajur":
+        case "Abajur":
+        case "ABAJUR":
+        case "Abajur Moderno":
+                                            
+            numeroAbajur ++
+            var precoTotalAbajur = precoAbajur * numeroAbajur
+            document.querySelector("#abajuresComprados").textContent = `Você comprou ${numeroAbajur} deste produto | Isso vai lhe custar ${precoTotalAbajur}`
+                                                
+            precoTotal = precoTotal + precoAbajur
+        break;
+
+        case "quadro":
+        case "Quadro":
+        case "QUADRO":
+        case "Quadro Decorativo Natureza":
+                                            
+            numeroQuadro ++
+            var precoTotalQuadro = precoQuadro * numeroQuadro
+            document.querySelector("#quadrosComprados").textContent = `Você comprou ${numeroQuadro} deste produto | Isso vai lhe custar ${precoTotalQuadro}`
+                                                
+            precoTotal = precoTotal + precoQuadro
+        break;
+
+        case "almofada":
+        case "Almofada":
+        case "ALMOFADA":
+        case "Almofada Veludo":
+                                                
+            numeroAlmofada ++
+            var precoTotalAlmofada = precoAlmofada * numeroAlmofada
+            document.querySelector("#almofadasCompradas").textContent = `Você comprou ${numeroAlmofada} deste produto | Isso vai lhe custar ${precoTotalAlmofada}`
+                                                    
+            precoTotal = precoTotal + precoAlmofada
+        break;
+    
+
+
+
+
+
+
+        // Brinquedos e jogos
+        case "carrinho":
+        case "Carrinho":
+        case "CARRINHO":
+        case "Carrinho de Controle Remoto":
+                                                
+            numeroCarrinho ++
+            var precoTotalCarrinho = precoCarrinho * numeroCarrinho
+            document.querySelector("#carrinhosComprados").textContent = `Você comprou ${numeroCarrinho} deste produto | Isso vai lhe custar ${precoTotalCarrinho}`
+                                                    
+            precoTotal = precoTotal + precoCarrinho
+        break;
+    
+        case "quebra-cabeça":
+        case "Quebra-cabeça":
+        case "QUEBRA-CABEÇA":
+        case "Quebra-cabeça 1000 Peças":
+                                                    
+            numeroQuebracabeca ++
+            var precoTotalQuebracabeca = precoQuebracabeca * numeroQuebracabeca
+            document.querySelector("#quebra-cabeçasComprados").textContent = `Você comprou ${numeroQuebracabeca} deste produto | Isso vai lhe custar ${precoTotalQuebracabeca}`
+                                                        
+            precoTotal = precoTotal + precoQuebracabeca
+        break;
+
+        case "boneca":
+        case "Boneca":
+        case "BONECA":
+        case "Boneca Interativa":
+                                                    
+            numeroBoneca ++
+            var precoTotalBoneca = precoBoneca * numeroBoneca
+            document.querySelector("#bonecasCompradas").textContent = `Você comprou ${numeroBoneca} deste produto | Isso vai lhe custar ${precoTotalBoneca}`
+                                                        
+            precoTotal = precoTotal + precoBoneca
+        break;
+
+        // Jogo não está funcionando
+        case "jogo":
+        case "Jogo":
+        case "JOGO":
+        case "Jogo de Tabuleiro Estratégia":
+                                                    
+            numeroJogo ++
+            var precoTotalJogo = precoJogo * numeroJogo
+            document.querySelector("#JogosComprados").textContent = `Você comprou ${numeroJogo} deste produto | Isso vai lhe custar ${precoTotalJogo}`
+                                                        
+            precoTotal = precoTotal + precoJogo
+        break;
+
+
+
+
+
+
+
+        // Livros e Mídia
+        case "livro":
+        case "Livro":
+        case "LIVRO":
+        case 'Livro "A Jornada do Herói"':
+                                                    
+            numeroLivro ++
+            var precoTotalLivro = precoLivro * numeroLivro
+            document.querySelector("#livrosComprados").textContent = `Você comprou ${numeroLivro} deste produto | Isso vai lhe custar ${precoTotalLivro}`
+                                                        
+            precoTotal = precoTotal + precoLivro
+        break;
+
+        case "dvd":
+        case "Dvd":
+        case "DVD":
+        case 'DVD Box "Série Completa"':
+                                                    
+            numeroDVD ++
+            var precoTotalDVD = precoDVD * numeroDVD
+            document.querySelector("#DVDsComprados").textContent = `Você comprou ${numeroDVD} deste produto | Isso vai lhe custar ${precoTotalDVD}`
+                                                        
+            precoTotal = precoTotal + precoDVD
+        break;
+
+        case "cd":
+        case "Cd":
+        case "CD":
+        case 'CD "Hits do Momento"':
+                                                    
+            numeroCD ++
+            var precoTotalCD = precoCD * numeroCD
+            document.querySelector("#CDsComprados").textContent = `Você comprou ${numeroCD} deste produto | Isso vai lhe custar ${precoTotalCD}`
+                                                        
+            precoTotal = precoTotal + precoCD
+        break;
+
+        case "e-book":
+        case "E-book":
+        case "E-BOOK":
+        case 'E-book "Aprenda a Programar"':
+                                                    
+            numeroEbook ++
+            var precoTotalEbook = precoEbook * numeroEbook
+            document.querySelector("#ebooksComprados").textContent = `Você comprou ${numeroEbook} deste produto | Isso vai lhe custar ${precoTotalEbook}`
+                                                        
+            precoTotal = precoTotal + precoEbook
+        break;
+
+
+
+
+
+
+        // Alimentos e bebidas
+        case "fruta":
+        case "Fruta":
+        case "FRUTA":
+        case "frutasCompradas":
+                                                
+            numeroFruta ++
+            var precoTotalFruta = precoFruta * numeroFruta
+            document.querySelector("#frutasCompradas").textContent = `Você comprou ${numeroFruta} deste produto | Isso vai lhe custar ${precoTotalFruta}`
+                                                    
+            precoTotal = precoTotal + precoFruta
+        break;
+    
+        case "vinho":
+        case "Vinho":
+        case "VINHO":
+        case "vinhosComprados":
+                                                    
+            numeroVinho ++
+            var precoTotalVinho = precoVinho * numeroVinho
+            document.querySelector("#vinhosComprados").textContent = `Você comprou ${numeroVinho} deste produto | Isso vai lhe custar ${precoTotalVinho}`
+                                                        
+            precoTotal = precoTotal + precoVinho
+        break;
+
+        case "chocolate":
+        case "Chocolate":
+        case "CHOCOLATE":
+        case "Caixa de Chocolates Finos":
+                                                    
+            numeroChocolate ++
+            var precoTotalChocolate = precoChocolate * numeroChocolate
+            document.querySelector("#chocolatesComprados").textContent = `Você comprou ${numeroChocolate} deste produto | Isso vai lhe custar ${precoTotalChocolate}`
+                                                        
+            precoTotal = precoTotal + precoChocolate
+        break;
+
+        case "azeite":
+        case "Azeite":
+        case "AZEITE":
+        case "Azeite Extra Virgem 500ml":
+                                                    
+            numeroAzeite ++
+            var precoTotalAzeite = precoAzeite * numeroAzeite
+            document.querySelector("#azeitesComprados").textContent = `Você comprou ${numeroAzeite} deste produto | Isso vai lhe custar ${precoTotalAzeite}`
+                                                        
+            precoTotal = precoTotal + precoAzeite
+        break;
+
         default:
             document.querySelector("#erro").textContent = "Esse produto não é valido"
-            
     }
+
 
     document.querySelector("#precoTotal").textContent = `${precoTotal}`
 

@@ -99,10 +99,20 @@ var numeroAzeite = 0
 // Valores não relacionados a produtos
 var precoTotal = 0
 var dinheiroCliente = 0
+var troco = dinheiroCliente - precoTotal
 
 function adicionarDinheiroDoCliente() {
     dinheiroCliente = document.querySelector("#escreverDinheiroDoCliente").value
+    dinheiroCliente = dinheiroCliente - precoTotal
     document.querySelector("#dinheiroDoCliente").textContent = `Voce têm ${dinheiroCliente} para gastar`
+
+    if(troco > 0) {
+        document.querySelector("#troco").innerHTML = `Neste momento, o seu troco será ${troco}`
+    } else {
+        if(troco < 0) {
+        document.querySelector("#troco").innerHTML = "Você não tem dinheiro o suficiente"
+        }
+    }
 }
 
 function adicionarProdutoALista() {
@@ -124,8 +134,6 @@ function adicionarProdutoALista() {
 
             precoTotal = precoTotal + precoSmartphone
             dinheiroCliente = dinheiroCliente - precoSmartphone
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "fone":
@@ -139,8 +147,6 @@ function adicionarProdutoALista() {
             
             precoTotal = precoTotal + precoFone
             dinheiroCliente = dinheiroCliente - precoFone
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "smartwatch":
@@ -154,8 +160,6 @@ function adicionarProdutoALista() {
     
             precoTotal = precoTotal + precoSmartwatch
             dinheiroCliente = dinheiroCliente - precoSmartwatch
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "tablet":
@@ -170,8 +174,6 @@ function adicionarProdutoALista() {
         
             precoTotal = precoTotal + precoTablet
             dinheiroCliente = dinheiroCliente - precoTablet
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
 
@@ -192,8 +194,6 @@ function adicionarProdutoALista() {
     
             precoTotal = precoTotal + precoLiquidificador
             dinheiroCliente = dinheiroCliente - precoLiquidificador
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "café":
@@ -207,8 +207,6 @@ function adicionarProdutoALista() {
     
             precoTotal = precoTotal + precoCafe
             dinheiroCliente = dinheiroCliente - precoCafe
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "ventilador":
@@ -222,8 +220,6 @@ function adicionarProdutoALista() {
         
             precoTotal = precoTotal + precoVentilador
             dinheiroCliente = dinheiroCliente - precoVentilador
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "microondas":
@@ -237,8 +233,6 @@ function adicionarProdutoALista() {
             
             precoTotal = precoTotal + precoMicroondas
             dinheiroCliente = dinheiroCliente - precoMicroondas
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
 
@@ -260,8 +254,6 @@ function adicionarProdutoALista() {
                 
             precoTotal = precoTotal + precoCamisa
             dinheiroCliente = dinheiroCliente - precoCamisa
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "calça":
@@ -275,8 +267,6 @@ function adicionarProdutoALista() {
                     
             precoTotal = precoTotal + precoCalca
             dinheiroCliente = dinheiroCliente - precoCalca
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "tenis":
@@ -290,8 +280,6 @@ function adicionarProdutoALista() {
                         
             precoTotal = precoTotal + precoTenis
             dinheiroCliente = dinheiroCliente - precoTenis
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "jaqueta":
@@ -305,8 +293,6 @@ function adicionarProdutoALista() {
                             
             precoTotal = precoTotal + precoJaqueta
             dinheiroCliente = dinheiroCliente - precoJaqueta
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "perfume":
@@ -320,8 +306,6 @@ function adicionarProdutoALista() {
                                 
             precoTotal = precoTotal + precoPerfume
             dinheiroCliente = dinheiroCliente - precoPerfume
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
 
@@ -342,8 +326,6 @@ function adicionarProdutoALista() {
                                     
             precoTotal = precoTotal + precoHidratante
             dinheiroCliente = dinheiroCliente - precoHidratante
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "maquiagem":
@@ -357,8 +339,6 @@ function adicionarProdutoALista() {
                                         
             precoTotal = precoTotal + precoMaquiagem
             dinheiroCliente = dinheiroCliente - precoMaquiagem
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "escova":
@@ -372,8 +352,6 @@ function adicionarProdutoALista() {
                                             
             precoTotal = precoTotal + precoEscova
             dinheiroCliente = dinheiroCliente - precoEscova
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "toalha":
@@ -387,8 +365,6 @@ function adicionarProdutoALista() {
                                                 
             precoTotal = precoTotal + precoToalha
             dinheiroCliente = dinheiroCliente - precoToalha
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
 
@@ -409,8 +385,6 @@ function adicionarProdutoALista() {
                                                 
             precoTotal = precoTotal + precoAbajur
             dinheiroCliente = dinheiroCliente - precoAbajur
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "quadro":
@@ -424,8 +398,6 @@ function adicionarProdutoALista() {
                                                 
             precoTotal = precoTotal + precoQuadro
             dinheiroCliente = dinheiroCliente - precoQuadro
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "almofada":
@@ -439,8 +411,6 @@ function adicionarProdutoALista() {
                                                     
             precoTotal = precoTotal + precoAlmofada
             dinheiroCliente = dinheiroCliente - precoAlmofada
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
     
 
@@ -461,8 +431,6 @@ function adicionarProdutoALista() {
                                                     
             precoTotal = precoTotal + precoCarrinho
             dinheiroCliente = dinheiroCliente - precoCarrinho
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
     
         case "quebra-cabeça":
@@ -476,8 +444,6 @@ function adicionarProdutoALista() {
                                                         
             precoTotal = precoTotal + precoQuebracabeca
             dinheiroCliente = dinheiroCliente - precoQuebracabeca
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "boneca":
@@ -491,8 +457,6 @@ function adicionarProdutoALista() {
                                                         
             precoTotal = precoTotal + precoBoneca
             dinheiroCliente = dinheiroCliente - precoBoneca
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         // Jogo não está funcionando
@@ -507,8 +471,6 @@ function adicionarProdutoALista() {
                                                         
             precoTotal = precoTotal + precoJogo
             dinheiroCliente = dinheiroCliente - precoJogo
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
 
@@ -529,8 +491,6 @@ function adicionarProdutoALista() {
                                                         
             precoTotal = precoTotal + precoLivro
             dinheiroCliente = dinheiroCliente - precoLivro
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "dvd":
@@ -544,8 +504,6 @@ function adicionarProdutoALista() {
                                                         
             precoTotal = precoTotal + precoDVD
             dinheiroCliente = dinheiroCliente - precoDVD
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "cd":
@@ -559,8 +517,6 @@ function adicionarProdutoALista() {
                                                         
             precoTotal = precoTotal + precoCD
             dinheiroCliente = dinheiroCliente - precoCD
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "e-book":
@@ -574,8 +530,6 @@ function adicionarProdutoALista() {
                                                         
             precoTotal = precoTotal + precoEbook
             dinheiroCliente = dinheiroCliente - precoEbook
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
 
@@ -595,8 +549,6 @@ function adicionarProdutoALista() {
                                                     
             precoTotal = precoTotal + precoFruta
             dinheiroCliente = dinheiroCliente - precoFruta
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
     
         case "vinho":
@@ -610,8 +562,6 @@ function adicionarProdutoALista() {
                                                         
             precoTotal = precoTotal + precoVinho
             dinheiroCliente = dinheiroCliente - precoVinho
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "chocolate":
@@ -625,8 +575,6 @@ function adicionarProdutoALista() {
                                                         
             precoTotal = precoTotal + precoChocolate
             dinheiroCliente = dinheiroCliente - precoChocolate
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         case "azeite":
@@ -640,15 +588,19 @@ function adicionarProdutoALista() {
                                                         
             precoTotal = precoTotal + precoAzeite
             dinheiroCliente = dinheiroCliente - precoAzeite
-            
-            document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
         break;
 
         default:
             document.querySelector("#erro").textContent = "Esse produto não é valido"
     }
 
-
-    document.querySelector("#precoTotal").textContent = `${precoTotal}`
-
+    document.querySelector("#dinheiroDoCliente").textContent = `Você têm ${dinheiroCliente} para gastar`
+    document.querySelector("#precoTotal").textContent = `No momento, o total é: ${precoTotal}`
+    if(troco > 0) {
+        document.querySelector("#troco").innerHTML = `Neste momento, o seu troco será ${troco}`
+    } else {
+        if(troco < 0) {
+        document.querySelector("#troco").innerHTML = "Você não tem dinheiro o suficiente"
+        }
+    }
 }
